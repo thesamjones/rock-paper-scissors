@@ -5,13 +5,15 @@ function computerPlay (rps) {
 const rps = ["rock", "paper", "scissors"];
 
 function playRound (playerSelection, computerSelection) {
+    if (playerSelection == computerSelection) {
+        return "It's a tie!"
+    }
+
     if (playerSelection === "rock") {
         if (computerSelection === "scissors")
         return "You Win! Rock beats Scissors!";
         if (computerSelection === "paper")
         return "You Lose! Paper beats Rock!";
-        if (computerSelection === "rock")
-        return "It's a tie!"
     }
 
     if (playerSelection === "paper") {
@@ -19,8 +21,6 @@ function playRound (playerSelection, computerSelection) {
         return "You Lose! Scissors beats Paper!";
         if (computerSelection === "rock")
         return "You Win! Paper beats Rock!";
-        if (computerSelection === "paper")
-        return "It's a tie!"
     }
 
     if (playerSelection === "scissors") {
@@ -28,13 +28,12 @@ function playRound (playerSelection, computerSelection) {
         return "It's a tie!";
         if (computerSelection === "rock")
         return "You Lose! Rock beats Scissors!";
-        if (computerSelection === "paper")
-        return "You Win! Scissors beats Paper!"
     }
 }
 
 function game() {
-    
+    for (let i = 0; i < 5; i++) {
+    }
 }
 
 const playerSelection = (prompt("Rock, paper, or scissors?")).toLowerCase();
