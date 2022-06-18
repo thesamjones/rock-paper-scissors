@@ -24,10 +24,10 @@ function playRound (playerSelection, computerSelection) {
     }
 
     if (playerSelection === "scissors") {
-        if (computerSelection === "scissors")
-        return "It's a tie!";
         if (computerSelection === "rock")
         return "You Lose! Rock beats Scissors!";
+        if (computerSelection === "paper")
+        return "You Win! Scissors beats Paper!"
     }
 }
 
